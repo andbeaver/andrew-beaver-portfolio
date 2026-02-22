@@ -1,6 +1,10 @@
 import Link from "next/link";
+import ProjectCard from "@/components/ProjectCard";
+import { projects } from "@/data/projects";
 
 export default function Home() {
+  const featured = projects.filter((p) => p.featured);
+
   return (
     <section className="max-w-5xl mx-auto px-6 py-24 sm:py-36 flex flex-col gap-8">
       {/* Hero badge */}
@@ -36,6 +40,29 @@ export default function Home() {
           Get in Touch
         </Link>
       </div>
+
+      {/* Featured Projects */}
+      {featured.length > 0 && (
+        <div className="pt-8 border-t border-slate-100 flex flex-col gap-5">
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-xl font-bold text-slate-900 tracking-tight">Featured Projects</h2>
+              <p className="text-sm text-slate-400 mt-0.5">A few highlights from my work.</p>
+            </div>
+            <Link
+              href="/projects"
+              className="text-sm text-indigo-600 hover:text-indigo-800 font-medium transition-colors inline-flex items-center gap-1"
+            >
+              All projects <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {featured.map((project) => (
+              <ProjectCard key={project.id} {...project} />
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }

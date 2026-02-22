@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 interface ProjectCardProps {
+  id: number;
   title: string;
   tag: string;
   description: string;
@@ -11,6 +12,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({
+  id,
   title,
   tag,
   description,
@@ -25,7 +27,12 @@ export default function ProjectCard({
       <div className="flex flex-col gap-1.5">
         <div className="flex items-start justify-between gap-3">
           <h3 className="font-bold text-slate-900 text-xl leading-snug">
-            {title}
+            <Link
+              href={`/projects/${id}`}
+              className="hover:text-indigo-600 transition-colors"
+            >
+              {title}
+            </Link>
           </h3>
           <span className="shrink-0 text-xs font-medium text-slate-400 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-full">
             {tag}
@@ -59,10 +66,17 @@ export default function ProjectCard({
       {/* Links */}
       <div className="mt-auto flex items-center gap-4">
         <Link
+          href={`/projects/${id}`}
+          className="text-sm text-indigo-600 hover:text-indigo-800 font-medium transition-colors inline-flex items-center gap-1"
+        >
+          View Details
+          <span aria-hidden="true">&rarr;</span>
+        </Link>
+        <Link
           href={githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-indigo-600 hover:text-indigo-800 font-medium transition-colors inline-flex items-center gap-1"
+          className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors inline-flex items-center gap-1"
         >
           GitHub
           <span aria-hidden="true">&rarr;</span>
