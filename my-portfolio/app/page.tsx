@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
+import AvailabilityBadge from "@/components/AvailabilityBadge";
 
 export default function Home() {
   const featured = projects.filter((p) => p.featured);
@@ -8,10 +9,7 @@ export default function Home() {
   return (
     <section className="max-w-5xl mx-auto px-6 py-24 sm:py-36 flex flex-col gap-8">
       {/* Hero badge */}
-      <span className="inline-flex items-center gap-2 self-start bg-indigo-50 text-indigo-600 text-xs font-semibold px-3 py-1 rounded-full border border-indigo-100">
-        <span className="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
-        Available for opportunities
-      </span>
+      <AvailabilityBadge variant="inline" />
 
       <div className="flex flex-col gap-3">
         <h1 className="text-5xl sm:text-6xl font-bold text-slate-900 tracking-tight leading-tight">
