@@ -19,10 +19,7 @@ export default function Home() {
       </div>
 
       <p className="text-slate-500 leading-relaxed max-w-xl text-base">
-        I&apos;m a computer science student focused on building reliable,
-        practical software. My work centers on backend systems, data handling,
-        and clean, maintainable code. I enjoy solving real problems with
-        straightforward technical solutions.
+        I build structured, scalable applications across web and mobile platforms. My experience spans full-stack cloud systems, real-time data applications, and cross-platform mobile development. I focus on clean architecture, thoughtful design, and building software that solves real problems.
       </p>
 
       <div className="flex items-center gap-3 pt-1">
