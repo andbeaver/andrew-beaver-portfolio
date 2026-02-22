@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <section className="max-w-5xl mx-auto px-6 py-16">
-      <div className="mb-10">
+      <div className="mb-8">
         <h1 className="text-3xl font-bold text-slate-900 tracking-tight">
           Projects
         </h1>
         <p className="text-slate-400 mt-2 text-sm">
-          A selection of personal and academic projects.
+          A mix of academic work, personal builds, and hackathon projects.
         </p>
       </div>
 
