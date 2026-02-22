@@ -9,21 +9,21 @@ export const metadata: Metadata = {
 const contactItems = [
   {
     label: "Email",
-    display: "andrew@example.com",
-    href: "mailto:andrew@example.com",
+    display: "andrewbeaver@live.ca",
+    href: "mailto:andrewbeaver@live.ca",
     external: false,
   },
   {
     label: "GitHub",
-    display: "github.com/andrewbeaver",
-    href: "https://github.com/andrewbeaver",
+    display: "github.com/andbeaver",
+    href: "https://github.com/andbeaver",
     external: true,
   },
   {
     label: "LinkedIn",
-    display: null,
-    href: null,
-    external: false,
+    display: "linkedin.com/in/andrewbeaver-software",
+    href: "https://www.linkedin.com/in/andrewbeaver-software",
+    external: true,
   },
 ];
 
