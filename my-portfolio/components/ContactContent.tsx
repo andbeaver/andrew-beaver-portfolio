@@ -113,11 +113,11 @@ export default function ContactContent() {
       <div className="mb-12 animate-[fadeIn_0.4s_ease]">
         <h1
           id="contact-heading"
-          className="text-4xl font-extrabold text-slate-900 tracking-tight sm:text-5xl"
+          className="text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight sm:text-5xl"
         >
           Get in Touch
         </h1>
-        <p className="mt-3 text-lg text-slate-500 max-w-xl">
+        <p className="mt-3 text-lg text-slate-500 dark:text-slate-400 max-w-xl">
           Let's build something!
         </p>
       </div>

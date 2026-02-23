@@ -10,17 +10,17 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
   return (
     <div className="flex flex-col gap-5">
       {/* Identity & info card */}
-      <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-8 shadow-sm">
         {/* Avatar + name */}
         <div className="flex items-center gap-4 mb-6">
-          <div className="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center text-xl font-bold text-indigo-600 shrink-0 select-none">
+          <div className="w-14 h-14 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center text-xl font-bold text-indigo-600 dark:text-indigo-400 shrink-0 select-none">
             AB
           </div>
           <div>
-            <h2 className="text-xl font-bold text-slate-900 leading-tight">
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
               Andrew Beaver
             </h2>
-            <p className="text-indigo-500 font-medium text-sm mt-0.5">
+            <p className="text-indigo-500 dark:text-indigo-400 font-medium text-sm mt-0.5">
               Software Developer
             </p>
           </div>
@@ -28,10 +28,10 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
 
         {/* Detail rows */}
         <ul className="flex flex-col gap-3.5 text-sm mb-6">
-          <li className="flex items-center gap-3 text-slate-600">
+          <li className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
             <svg
               aria-hidden="true"
-              className="w-4 h-4 text-slate-400 shrink-0"
+              className="w-4 h-4 text-slate-400 dark:text-slate-500 shrink-0"
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
@@ -51,10 +51,10 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
             Halifax, Nova Scotia, Canada
           </li>
 
-          <li className="flex items-center gap-3 text-slate-600">
+          <li className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
             <svg
               aria-hidden="true"
-              className="w-4 h-4 text-slate-400 shrink-0"
+              className="w-4 h-4 text-slate-400 dark:text-slate-500 shrink-0"
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
@@ -71,19 +71,19 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
         </ul>
 
         {/* Availability */}
-        <div className="border border-emerald-100 rounded-xl p-4 bg-emerald-50/40">
+        <div className="border border-emerald-100 dark:border-emerald-900/50 rounded-xl p-4 bg-emerald-50/40 dark:bg-emerald-900/10">
           <AvailabilityBadge variant="card" />
         </div>
 
-        <div className="border-t border-slate-100 my-5" />
+        <div className="border-t border-slate-100 dark:border-slate-700 my-5" />
 
         {/* Email + copy */}
         <div>
-          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">
+          <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-2">
             Direct Email
           </p>
-          <div className="flex items-center justify-between gap-3 bg-slate-50 border border-slate-200 rounded-lg px-4 py-3">
-            <span className="text-sm text-slate-800 font-medium truncate">
+          <div className="flex items-center justify-between gap-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-lg px-4 py-3">
+            <span className="text-sm text-slate-800 dark:text-slate-200 font-medium truncate">
               {email}
             </span>
             <button
@@ -93,7 +93,7 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
                   ? "Email address copied"
                   : "Copy email address to clipboard"
               }
-              className="shrink-0 flex items-center gap-1.5 text-xs font-semibold text-indigo-600 hover:text-indigo-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded"
+              className="shrink-0 flex items-center gap-1.5 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded"
             >
               {copied ? (
                 <>
@@ -138,8 +138,8 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
       </div>
 
       {/* Social links card */}
-      <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 shadow-sm">
+        <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">
           Also Find Me On
         </p>
         <div className="flex flex-col gap-3">
@@ -147,11 +147,11 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
             href="https://github.com/andbeaver"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 text-slate-700 hover:text-indigo-600 transition-colors text-sm font-medium group focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded"
+            className="flex items-center gap-3 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm font-medium group focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded"
           >
             <svg
               aria-hidden="true"
-              className="w-5 h-5 text-slate-400 group-hover:text-indigo-500 transition-colors shrink-0"
+              className="w-5 h-5 text-slate-400 dark:text-slate-500 group-hover:text-indigo-500 transition-colors shrink-0"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -165,11 +165,11 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
             href="https://www.linkedin.com/in/andrewbeaver-software"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 text-slate-700 hover:text-indigo-600 transition-colors text-sm font-medium group focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded"
+            className="flex items-center gap-3 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm font-medium group focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded"
           >
             <svg
               aria-hidden="true"
-              className="w-5 h-5 text-slate-400 group-hover:text-indigo-500 transition-colors shrink-0"
+              className="w-5 h-5 text-slate-400 dark:text-slate-500 group-hover:text-indigo-500 transition-colors shrink-0"
               fill="currentColor"
               viewBox="0 0 24 24"
             >

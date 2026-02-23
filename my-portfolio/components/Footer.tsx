@@ -41,25 +41,25 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-50 border-t border-slate-200">
+    <footer className="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
       <div className="max-w-5xl mx-auto px-8 pt-12 pb-8">
 
         {/* Three-column grid */}
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-8">
 
           {/* Left: Brand — full width on mobile */}
-          <div className="col-span-2 sm:col-span-1 flex flex-col gap-2 pb-6 border-b border-slate-100 sm:border-none sm:pb-0">
-            <span className="text-lg font-extrabold text-slate-900 tracking-tight">
+          <div className="col-span-2 sm:col-span-1 flex flex-col gap-2 pb-6 border-b border-slate-100 dark:border-slate-800 sm:border-none sm:pb-0">
+            <span className="text-lg font-extrabold text-slate-900 dark:text-white tracking-tight">
               Andrew Beaver
             </span>
-            <p className="text-xs text-slate-400 leading-relaxed max-w-xs">
+            <p className="text-xs text-slate-400 dark:text-slate-500 leading-relaxed max-w-xs">
               Student software developer building thoughtful, user-focused products.
             </p>
           </div>
 
           {/* Middle: Navigation */}
           <div>
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">
+            <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">
               Navigation
             </p>
             <ul className="flex flex-col gap-2">
@@ -67,7 +67,7 @@ export default function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm text-slate-500 hover:text-indigo-600 hover:translate-x-0.5 transition-all duration-200"
+                    className="text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:translate-x-0.5 transition-all duration-200"
                   >
                     {label}
                   </Link>
@@ -78,7 +78,7 @@ export default function Footer() {
 
           {/* Right: Social */}
           <div>
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">
+            <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">
               Connect
             </p>
             <ul className="flex flex-col gap-3">
@@ -88,7 +88,7 @@ export default function Footer() {
                     href={href}
                     target={href.startsWith("mailto") ? undefined : "_blank"}
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-indigo-600 transition-colors duration-200"
+                    className="inline-flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
                   >
                     {icon}
                     {label}
@@ -101,11 +101,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright row */}
-        <div className="mt-10 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-slate-400 text-center sm:text-left">
+        <div className="mt-10 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="text-xs text-slate-400 dark:text-slate-500 text-center sm:text-left">
             &copy; {year} Andrew Beaver. All rights reserved.
           </p>
-          <p className="text-xs text-slate-300 text-center sm:text-right">
+          <p className="text-xs text-slate-300 dark:text-slate-600 text-center sm:text-right">
             Built with Next.js &amp; Tailwind CSS
           </p>
         </div>

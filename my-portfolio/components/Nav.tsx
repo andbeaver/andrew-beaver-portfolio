@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -52,8 +53,8 @@ export default function Nav() {
 
   return (
     <header
-      className={`backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 shadow-md" : "bg-white/90 shadow-sm"
+      className={`backdrop-blur-md border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-white/95 dark:bg-slate-900/95 shadow-md" : "bg-white/90 dark:bg-slate-900/90 shadow-sm"
       }`}
     >
       <nav
@@ -63,10 +64,10 @@ export default function Nav() {
       >
         {/* Logo / Brand */}
         <Link href="/" className="flex flex-col leading-none group">
-          <span className="text-xl font-bold text-slate-900 tracking-tight group-hover:text-indigo-600 transition-colors">
+          <span className="text-xl font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
             Andrew Beaver
           </span>
-          <span className="text-xs text-slate-400 font-medium mt-0.5">
+          <span className="text-xs text-slate-400 dark:text-slate-500 font-medium mt-0.5">
             Developer Portfolio
           </span>
         </Link>
@@ -81,14 +82,14 @@ export default function Nav() {
                   <Link
                     href={href}
                     className={`group relative px-4 py-2 text-sm font-medium transition-colors ${
-                      active ? "text-indigo-600" : "text-slate-500 hover:text-slate-900"
+                      active ? "text-indigo-600 dark:text-indigo-400" : "text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
                     }`}
                   >
                     {label}
                     <span
                       className={`absolute bottom-0 left-0 h-0.5 rounded-full bg-indigo-600 transition-all duration-300 ${
                         active ? "w-4/5" : "w-0 group-hover:w-full"
-                      }`}
+                      } bg-indigo-600 dark:bg-indigo-400`}
                     />
                   </Link>
                 </li>
@@ -100,7 +101,7 @@ export default function Nav() {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative px-4 py-2 text-sm font-medium transition-colors text-slate-500 hover:text-slate-900"
+                className="group relative px-4 py-2 text-sm font-medium transition-colors text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
               >
                 Resume
                 <span className="absolute bottom-0 left-0 h-0.5 w-0 rounded-full bg-indigo-600 transition-all duration-300 group-hover:w-full" />
@@ -108,12 +109,14 @@ export default function Nav() {
             </li>
           </ul>
 
+          <ThemeToggle />
+
           <Link
             href="/contact"
             className={`text-sm font-semibold px-4 py-2 rounded-lg border transition-colors ${
               pathname === "/contact"
                 ? "bg-indigo-600 text-white border-indigo-600"
-                : "bg-white text-indigo-600 border-indigo-300 hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
+                : "bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 border-indigo-300 dark:border-indigo-700 hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
             }`}
           >
             Contact
@@ -158,7 +161,7 @@ export default function Nav() {
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <ul className="flex flex-col px-6 pb-5 pt-1 gap-1 border-t border-slate-100">
+        <ul className="flex flex-col px-6 pb-5 pt-1 gap-1 border-t border-slate-100 dark:border-slate-800">
           {navLinks.map(({ href, label }) => {
             const active = isActive(href, pathname);
             return (
@@ -168,8 +171,8 @@ export default function Nav() {
                   onClick={() => setMenuOpen(false)}
                   className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                     active
-                      ? "text-indigo-600 bg-indigo-50"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
+                      ? "text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30"
+                      : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
                   }`}
                 >
                   {active && (
@@ -187,19 +190,20 @@ export default function Nav() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
-              className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors text-slate-600 hover:text-slate-900 hover:bg-slate-100"
+              className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
             >
               Resume
             </a>
           </li>
-          <li className="pt-1">
+          <li className="pt-1 flex items-center gap-2">
+            <ThemeToggle />
             <Link
               href="/contact"
               onClick={() => setMenuOpen(false)}
-              className={`block text-center text-sm font-semibold px-4 py-3 rounded-lg border transition-colors ${
+              className={`flex-1 block text-center text-sm font-semibold px-4 py-3 rounded-lg border transition-colors ${
                 pathname === "/contact"
                   ? "bg-indigo-600 text-white border-indigo-600"
-                  : "bg-white text-indigo-600 border-indigo-300 hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
+                  : "bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 border-indigo-300 dark:border-indigo-700 hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
               }`}
             >
               Contact
