@@ -52,7 +52,7 @@ export default function AboutPage() {
       {/* Skills */}
       <div>
         <h2 className="text-xl font-bold text-slate-900 mb-5">
-          Technical Skills
+          Technical Skills/Experience
         </h2>
         <div className="flex flex-col gap-5">
           {skillGroups.map((group) => (
