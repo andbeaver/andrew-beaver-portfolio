@@ -27,7 +27,7 @@ export const projects: Project[] = [
       "React storefront with dynamic routing and a validated multi-step purchase flow.",
       "REST API with SQL joins, prepared statements, and environment-based config.",
     ],
-    githubUrl: "https://github.com/andrewbeaver",
+    githubUrl: "https://github.com/andbeaver/TicketHive",
     featured: true,
   },
   {
@@ -43,7 +43,7 @@ export const projects: Project[] = [
       "Multi-screen navigation across calculator, history, and ratio settings.",
       "Dynamic light/dark theming and extended bolus duration calculations.",
     ],
-    githubUrl: "https://github.com/andrewbeaver",
+    githubUrl: "https://github.com/andrewbeaverNSCC/https---github.com-andrewbeaverNSCC-MealWave",
     featured: true,
   },
   {
@@ -59,7 +59,7 @@ export const projects: Project[] = [
       "MVVM architecture with RoomDB for persisting route selections across sessions.",
       "Built entirely in Jetpack Compose with a clean, responsive UI.",
     ],
-    githubUrl: "https://github.com/andrewbeaver",
+    githubUrl: "https://github.com/andbeaver/HalifaxTransit",
     featured: true,
   },
   {
@@ -75,7 +75,7 @@ export const projects: Project[] = [
       "Led frontend architecture, state management, and Maps API integration.",
       "Coordinated team delivery via GitHub feature branching under a tight deadline.",
     ],
-    githubUrl: "https://github.com/andrewbeaver",
+    githubUrl: "https://github.com/W0509891/arrivio",
     featured: false,
   },
   {
@@ -91,7 +91,7 @@ export const projects: Project[] = [
       "Startup location workflow using Google Play Services and Accompanist for runtime permissions.",
       "Async networking layer with Retrofit and Coroutines powering all weather data fetching.",
     ],
-    githubUrl: "https://github.com/andrewbeaver",
+    githubUrl: "https://github.com/andbeaver/WeatherPal",
     featured: false,
   },
   {
@@ -107,7 +107,7 @@ export const projects: Project[] = [
       "Live retraining: users label new samples and instantly compare pre/post-training performance.",
       "Evaluated with Accuracy, F1 Score, AUC, and LogLoss, all surfaced in the Windows Forms UI.",
     ],
-    githubUrl: "https://github.com/andrewbeaver",
+    githubUrl: "https://github.com/andbeaver/sentiment-analysis-ml",
     featured: false,
   },
   {
@@ -123,7 +123,7 @@ export const projects: Project[] = [
       "Per-agent \"moved\" flags guarantee a single action per entity per generation.",
       "Memory-safe dynamic entity handling throughout the full simulation lifecycle.",
     ],
-    githubUrl: "https://github.com/andrewbeaver",
+    githubUrl: "https://github.com/andbeaver/humans-vs-zombies",
     featured: false,
   },
   {
@@ -139,7 +139,7 @@ export const projects: Project[] = [
       "AABB collision detection handling both shape-to-shape and wall collisions.",
       "Mouse-driven shape spawning at runtime with boundary clamping and resize handling.",
     ],
-    githubUrl: "https://github.com/andrewbeaver",
+    githubUrl: "https://github.com/andbeaver/dynamic-screen-saver",
     featured: false,
   },
   {
@@ -155,7 +155,7 @@ export const projects: Project[] = [
       "Custom message-framing protocol to handle partial reads and guarantee delivery.",
       "IDisposable pattern for clean shutdown and proper resource management of network streams.",
     ],
-    githubUrl: "https://github.com/andrewbeaver",
+    githubUrl: "https://github.com/andbeaver/async-chat-client",
     featured: false,
   },
 ];
