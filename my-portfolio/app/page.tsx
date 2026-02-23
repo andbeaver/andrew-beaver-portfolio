@@ -1,9 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import ProjectCard from "@/components/ProjectCard";
-import FadeInSection from "@/components/FadeInSection";
+import ProjectCard from "@/components/projects/ProjectCard";
+import FadeInSection from "@/components/ui/FadeInSection";
 import { projects } from "@/data/projects";
-import AvailabilityBadge from "@/components/AvailabilityBadge";
+import AvailabilityBadge from "@/components/ui/AvailabilityBadge";
+import TypeWriter from "@/components/ui/TypeWriter";
+import TechTooltip from "@/components/ui/TechTooltip";
 // Photo by <a href="https://unsplash.com/@nathfx?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">natasha</a> on <a href="https://unsplash.com/photos/body-of-water-across-city-buildings-093I0j4A73Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
       
 export default function Home() {
@@ -24,8 +26,15 @@ export default function Home() {
           <h1 className="text-6xl sm:text-7xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.05]">
             Andrew Beaver
           </h1>
-          <p className="text-xl sm:text-2xl text-indigo-600 font-semibold">
-            Full-Stack Developer &nbsp;&middot;&nbsp; Web &amp; Mobile Applications
+          <p className="text-xl sm:text-2xl text-indigo-600 font-semibold h-8 sm:h-9">
+            <TypeWriter
+              phrases={[
+                "Full-Stack Developer",
+                "Web & Mobile Applications",
+                "Cloud & API Engineer",
+                "UI/UX Enthusiast",
+              ]}
+            />
           </p>
         </div>
 
@@ -99,8 +108,8 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {featured.map((project) => (
-              <ProjectCard key={project.id} {...project} />
+            {featured.map((project, i) => (
+              <ProjectCard key={project.id} {...project} index={i} />
             ))}
           </div>
         </div>
@@ -128,12 +137,7 @@ export default function Home() {
             "Python", "React Native", "PostgreSQL", "Firebase",
             "Tailwind CSS", "REST APIs", "Git",
           ].map((tech) => (
-            <span
-              key={tech}
-              className="px-3.5 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full shadow-sm"
-            >
-              {tech}
-            </span>
+            <TechTooltip key={tech} label={tech} variant="pill" />
           ))}
         </div>
       </div>

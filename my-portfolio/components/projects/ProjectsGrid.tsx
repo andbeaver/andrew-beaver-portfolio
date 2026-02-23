@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "@/components/projects/ProjectCard";
 import type { Project, ProjectCategory } from "@/data/projects";
 
 const CATEGORIES: ("All" | ProjectCategory)[] = ["All", "Web", "Mobile", "Systems", "Data"];
@@ -60,8 +60,8 @@ export default function ProjectsGrid({ projects }: Props) {
       <div className="flex-1 min-w-0">
         {filtered.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {filtered.map((project) => (
-              <ProjectCard key={project.id} {...project} />
+            {filtered.map((project, i) => (
+              <ProjectCard key={project.id} {...project} index={i} />
             ))}
           </div>
         ) : (

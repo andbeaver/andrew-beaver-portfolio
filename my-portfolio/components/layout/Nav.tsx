@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import ThemeToggle from "@/components/ThemeToggle";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -53,7 +53,7 @@ export default function Nav() {
 
   return (
     <header
-      className={`backdrop-blur-md border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 transition-all duration-300 ${
+      className={`nav-gradient-border relative backdrop-blur-md border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 transition-all duration-300 ${
         scrolled ? "bg-white/95 dark:bg-slate-900/95 shadow-md" : "bg-white/90 dark:bg-slate-900/90 shadow-sm"
       }`}
     >

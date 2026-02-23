@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SkillsSection from "@/components/ui/SkillsSection";
 
 export const metadata: Metadata = {
   title: "About | Andrew Beaver",
@@ -55,23 +56,7 @@ export default function AboutPage() {
           Technical Skills/Experience
         </h2>
         <div className="flex flex-col gap-5">
-          {skillGroups.map((group) => (
-            <div key={group.label}>
-              <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-2.5">
-                {group.label}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {group.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-3.5 py-1.5 text-sm text-slate-700 dark:text-slate-300 shadow-sm hover:border-indigo-300 dark:hover:border-indigo-700 hover:text-indigo-700 dark:hover:text-indigo-400 transition-colors"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+          <SkillsSection groups={skillGroups} />
         </div>
       </div>
 
@@ -81,7 +66,7 @@ export default function AboutPage() {
         <div className="flex flex-col gap-4">
 
           {/* IT Programming */}
-            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6 flex flex-col gap-2 shadow-sm">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6 flex flex-col gap-2 shadow-sm hover:shadow-md hover:border-indigo-200 dark:hover:border-indigo-700 hover:-translate-y-1 transition-all duration-200">
               <div className="flex items-start justify-between gap-4 flex-wrap">
                 <div>
                   <p className="font-semibold text-slate-900 dark:text-white">IT Programming</p>
@@ -96,7 +81,7 @@ export default function AboutPage() {
           </div>
 
           {/* Business Administration */}
-            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6 flex flex-col gap-2 shadow-sm">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6 flex flex-col gap-2 shadow-sm hover:shadow-md hover:border-indigo-200 dark:hover:border-indigo-700 hover:-translate-y-1 transition-all duration-200">
               <div className="flex items-start justify-between gap-4 flex-wrap">
                 <div>
                   <p className="font-semibold text-slate-900 dark:text-white">
@@ -114,7 +99,7 @@ export default function AboutPage() {
           </div>
 
           {/* DELF B1 */}
-            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6 flex flex-col gap-2 shadow-sm">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6 flex flex-col gap-2 shadow-sm hover:shadow-md hover:border-indigo-200 dark:hover:border-indigo-700 hover:-translate-y-1 transition-all duration-200">
               <div className="flex items-start justify-between gap-4 flex-wrap">
                 <div>
                   <p className="font-semibold text-slate-900 dark:text-white">DELF B1 Certification</p>
