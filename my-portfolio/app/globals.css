@@ -81,3 +81,20 @@ body {
 .anim-delay-2 { animation-delay: 200ms; }
 .anim-delay-3 { animation-delay: 340ms; }
 .anim-delay-4 { animation-delay: 460ms; }
+
+/* Scroll-triggered fade-in for sections */
+.section-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+}
+.section-fade-in.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth dark/light mode color transitions */
+body,
+body * {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
+}

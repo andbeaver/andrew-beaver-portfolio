@@ -36,7 +36,7 @@ export default function AboutPage() {
   return (
     <section className="max-w-5xl mx-auto px-6 py-16 flex flex-col gap-12">
       {/* Bio */}
-      <div>
+      <div className="animate-fade-in anim-delay-1">
         <h1 className="text-3xl font-bold text-slate-900 dark:text-white tracking-tight mb-4">
           About
         </h1>
@@ -50,7 +50,7 @@ export default function AboutPage() {
       </div>
 
       {/* Skills */}
-      <div>
+      <div className="animate-fade-in anim-delay-2">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-5">
           Technical Skills/Experience
         </h2>
@@ -76,7 +76,7 @@ export default function AboutPage() {
       </div>
 
       {/* Education */}
-      <div>
+      <div className="animate-fade-in anim-delay-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Education</h2>
         <div className="flex flex-col gap-4">
 

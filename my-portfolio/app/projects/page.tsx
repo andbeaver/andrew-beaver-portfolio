@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-16">
-      <div className="mb-8">
+      <div className="mb-8 animate-fade-in anim-delay-1">
         <h1 className="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
           Projects
         </h1>
@@ -19,7 +19,9 @@ export default function ProjectsPage() {
         </p>
       </div>
 
-      <ProjectsGrid projects={projects} />
+      <div className="animate-fade-in anim-delay-2">
+        <ProjectsGrid projects={projects} />
+      </div>
     </section>
   );
 }
