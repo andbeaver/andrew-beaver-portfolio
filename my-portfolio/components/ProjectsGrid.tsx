@@ -22,7 +22,7 @@ export default function ProjectsGrid({ projects }: Props) {
     <div className="flex gap-8 items-start">
       {/* Left sidebar – category filter */}
       <aside className="w-40 shrink-0 sticky top-24">
-        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">
+        <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-3">
           Category
         </p>
         <nav className="flex flex-col gap-0.5">
@@ -38,14 +38,14 @@ export default function ProjectsGrid({ projects }: Props) {
                 onClick={() => setActive(cat)}
                 className={`flex items-center justify-between w-full text-sm px-3 py-2 rounded-lg transition-colors text-left ${
                   isActive
-                    ? "bg-indigo-50 text-indigo-700 font-semibold"
-                    : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                    ? "bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400 font-semibold"
+                    : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200"
                 }`}
               >
                 <span>{cat}</span>
                 <span
                   className={`text-xs tabular-nums ${
-                    isActive ? "text-indigo-500" : "text-slate-400"
+                    isActive ? "text-indigo-500" : "text-slate-400 dark:text-slate-500"
                   }`}
                 >
                   {count}
@@ -65,7 +65,7 @@ export default function ProjectsGrid({ projects }: Props) {
             ))}
           </div>
         ) : (
-          <div className="py-16 text-center text-slate-400 text-sm">
+          <div className="py-16 text-center text-slate-400 dark:text-slate-600 text-sm">
             No projects in this category yet.
           </div>
         )}

@@ -18,7 +18,7 @@ export default function Home() {
 
         {/* Headline block */}
         <div className="flex flex-col gap-3 animate-fade-in anim-delay-2">
-          <h1 className="text-6xl sm:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.05]">
+          <h1 className="text-6xl sm:text-7xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.05]">
             Andrew Beaver
           </h1>
           <p className="text-xl sm:text-2xl text-indigo-600 font-semibold">
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
 
         {/* Supporting paragraph — 1–2 sentences */}
-        <p className="text-base sm:text-lg text-slate-500 leading-relaxed max-w-2xl animate-fade-in anim-delay-3">
+          <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl animate-fade-in anim-delay-3">
           I design and build scalable applications for web and mobile — spanning full-stack cloud systems, real-time data, and cross-platform development.
           My focus is clean architecture and software that delivers lasting, practical value.
         </p>
@@ -52,15 +52,15 @@ export default function Home() {
 
       {/* Featured Projects */}
       {featured.length > 0 && (
-        <div className="py-10 border-t border-slate-100 flex flex-col gap-5">
+        <div className="py-10 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-5">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-xl font-bold text-slate-900 tracking-tight">Featured Projects</h2>
-              <p className="text-sm text-slate-400 mt-0.5">A few highlights from my work.</p>
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Featured Projects</h2>
+              <p className="text-sm text-slate-400 dark:text-slate-500 mt-0.5">A few highlights from my work.</p>
             </div>
             <Link
               href="/projects"
-              className="text-sm text-indigo-600 hover:text-indigo-800 font-medium transition-colors inline-flex items-center gap-1"
+              className="text-sm text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-medium transition-colors inline-flex items-center gap-1"
             >
               All projects <span aria-hidden="true">&rarr;</span>
             </Link>
@@ -74,11 +74,11 @@ export default function Home() {
       )}
 
       {/* Core Technologies */}
-      <div className="py-10 border-t border-slate-100 flex flex-col gap-5">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-xl font-bold text-slate-900 tracking-tight">Core Technologies</h2>
-            <p className="text-sm text-slate-400 mt-0.5">Tools and languages I have experience with.</p>
+        <div className="py-10 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-5">
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Core Technologies</h2>
+              <p className="text-sm text-slate-400 dark:text-slate-500 mt-0.5">Tools and languages I have experience with.</p>
           </div>
           <Link
             href="/about"
@@ -95,7 +95,7 @@ export default function Home() {
           ].map((tech) => (
             <span
               key={tech}
-              className="px-3.5 py-1.5 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-full shadow-sm"
+              className="px-3.5 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full shadow-sm"
             >
               {tech}
             </span>

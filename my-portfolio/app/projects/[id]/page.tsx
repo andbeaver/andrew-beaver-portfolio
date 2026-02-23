@@ -50,7 +50,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       {/* Back link */}
       <Link
         href="/projects"
-        className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors mb-10"
+        className="inline-flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-medium transition-colors mb-10"
       >
         <span aria-hidden="true">&larr;</span>
         All Projects
@@ -59,7 +59,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       {/* Header */}
       <div className="flex flex-col gap-4 mb-10">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="text-xs font-medium text-slate-400 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-full">
+          <span className="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-2.5 py-1 rounded-full">
             {tag}
           </span>
           <span
@@ -68,20 +68,20 @@ export default async function ProjectDetailPage({ params }: Props) {
             {category}
           </span>
         </div>
-        <h1 className="text-4xl font-bold text-slate-900 tracking-tight leading-tight">
+        <h1 className="text-4xl font-bold text-slate-900 dark:text-white tracking-tight leading-tight">
           {title}
         </h1>
-        <p className="text-slate-500 text-base leading-relaxed">{description}</p>
+        <p className="text-slate-500 dark:text-slate-400 text-base leading-relaxed">{description}</p>
       </div>
 
       {/* Highlights */}
       <div className="mb-10">
-        <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">
+        <h2 className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">
           Highlights
         </h2>
         <ul className="flex flex-col gap-3">
           {bullets.map((b) => (
-            <li key={b} className="flex items-start gap-3 text-slate-700 text-sm leading-relaxed">
+            <li key={b} className="flex items-start gap-3 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
               <span className="mt-2 shrink-0 w-1.5 h-1.5 rounded-full bg-indigo-400" />
               {b}
             </li>
@@ -91,14 +91,14 @@ export default async function ProjectDetailPage({ params }: Props) {
 
       {/* Tech stack */}
       <div className="mb-10">
-        <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">
+        <h2 className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">
           Tech Stack
         </h2>
         <div className="flex flex-wrap gap-2">
           {techStack.map((tech) => (
             <span
               key={tech}
-              className="bg-indigo-50 text-indigo-700 text-xs px-3 py-1.5 rounded-full font-medium border border-indigo-100"
+              className="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400 text-xs px-3 py-1.5 rounded-full font-medium border border-indigo-100 dark:border-indigo-800"
             >
               {tech}
             </span>
@@ -107,12 +107,12 @@ export default async function ProjectDetailPage({ params }: Props) {
       </div>
 
       {/* Links */}
-      <div className="flex items-center gap-4 pt-6 border-t border-slate-100">
+        <div className="flex items-center gap-4 pt-6 border-t border-slate-100 dark:border-slate-800">
         <Link
           href={githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 bg-slate-900 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-slate-700 transition-colors"
+            className="inline-flex items-center gap-1.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-200 transition-colors"
         >
           View on GitHub
           <span aria-hidden="true">&rarr;</span>
@@ -122,7 +122,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 px-5 py-2.5 rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-white transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 dark:text-slate-300 px-5 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-500 hover:bg-white dark:hover:bg-slate-800 transition-colors"
           >
             Live Demo
             <span aria-hidden="true">&rarr;</span>

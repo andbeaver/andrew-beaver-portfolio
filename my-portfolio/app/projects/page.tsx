@@ -11,10 +11,10 @@ export default function ProjectsPage() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-16">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-slate-900 tracking-tight">
+        <h1 className="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
           Projects
         </h1>
-        <p className="text-slate-400 mt-2 text-sm">
+        <p className="text-slate-400 dark:text-slate-500 mt-2 text-sm">
           A mix of academic work, personal builds, and hackathon projects.
         </p>
       </div>
