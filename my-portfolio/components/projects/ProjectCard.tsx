@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface ProjectCardProps {
   id: number;
@@ -9,7 +12,11 @@ interface ProjectCardProps {
   bullets: string[];
   githubUrl: string;
   liveUrl?: string;
+  index?: number;
 }
+
+const MAX_TILT = 4;
+const STAGGER_MS = 120;
 
 export default function ProjectCard({
   id,
@@ -20,9 +27,64 @@ export default function ProjectCard({
   bullets,
   githubUrl,
   liveUrl,
+  index = 0,
 }: ProjectCardProps) {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [tiltStyle, setTiltStyle] = useState<React.CSSProperties>({});
+  const [visible, setVisible] = useState(false);
+
+  // Scroll-triggered staggered entrance
+  useEffect(() => {
+    const el = cardRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => setVisible(true), index * STAGGER_MS);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -30px 0px" }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [index]);
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const el = cardRef.current;
+    if (!el || window.innerWidth < 768) return;
+
+    const rect = el.getBoundingClientRect();
+    const xNorm = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+    const yNorm = ((e.clientY - rect.top) / rect.height) * 2 - 1;
+
+    setTiltStyle({
+      transform: `perspective(600px) rotateX(${-yNorm * MAX_TILT}deg) rotateY(${xNorm * MAX_TILT}deg) scale3d(1.02, 1.02, 1.02)`,
+      transition: "transform 0.1s ease-out",
+    });
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setTiltStyle({
+      transform: "perspective(600px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)",
+      transition: "transform 0.4s ease-out",
+    });
+  }, []);
+
   return (
-    <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6 flex flex-col gap-5 shadow-sm hover:shadow-md hover:border-indigo-200 dark:hover:border-indigo-700 hover:-translate-y-1 transition-all duration-200">
+    <div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={tiltStyle}
+      className={`bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6 flex flex-col gap-5 shadow-sm hover:shadow-md hover:border-indigo-200 dark:hover:border-indigo-700 transition-all duration-500 will-change-transform ${
+        visible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-6"
+      }`}
+    >
       {/* Header */}
       <div className="flex flex-col gap-1.5">
         <div className="flex items-start justify-between gap-3">

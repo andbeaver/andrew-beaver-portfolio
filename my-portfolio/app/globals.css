@@ -93,6 +93,40 @@ body {
   transform: translateY(0);
 }
 
+/* Animated gradient border on nav */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.nav-gradient-border {
+  overflow: visible !important;
+}
+
+.nav-gradient-border::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  z-index: 99;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899, #f59e0b, #6366f1);
+  background-size: 300% 100%;
+  animation: gradientShift 6s ease infinite;
+  transition: none;
+}
+
+/* Blinking cursor for typewriter */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-blink {
+  animation: blink 0.75s step-end infinite;
+}
+
 /* Smooth dark/light mode color transitions */
 body,
 body * {

@@ -1,13 +1,13 @@
 ﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
-import ContactCard from "@/components/ContactCard";
+import ContactCard from "@/components/contact/ContactCard";
 import ContactForm, {
   getErrors,
   type FormData,
   type FormField,
   type SubmitStatus,
-} from "@/components/ContactForm";
+} from "@/components/contact/ContactForm";
 
 const EMAIL = "andrewbeaver@live.ca";
 

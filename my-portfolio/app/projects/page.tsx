@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ProjectsGrid from "@/components/ProjectsGrid";
+import ProjectsGrid from "@/components/projects/ProjectsGrid";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {

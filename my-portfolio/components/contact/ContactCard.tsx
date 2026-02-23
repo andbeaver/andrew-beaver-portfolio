@@ -1,4 +1,4 @@
-import AvailabilityBadge from "@/components/AvailabilityBadge";
+import AvailabilityBadge from "@/components/ui/AvailabilityBadge";
 
 interface ContactCardProps {
   email: string;
