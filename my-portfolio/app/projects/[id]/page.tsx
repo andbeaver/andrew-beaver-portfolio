@@ -48,6 +48,7 @@ export default async function ProjectDetailPage({ params }: Props) {
   return (
     <section className="max-w-3xl mx-auto px-6 py-16">
       {/* Back link */}
+      <div className="animate-fade-in anim-delay-1">
       <Link
         href="/projects"
         className="inline-flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-medium transition-colors mb-10"
@@ -55,9 +56,10 @@ export default async function ProjectDetailPage({ params }: Props) {
         <span aria-hidden="true">&larr;</span>
         All Projects
       </Link>
+      </div>
 
       {/* Header */}
-      <div className="flex flex-col gap-4 mb-10">
+      <div className="flex flex-col gap-4 mb-10 animate-fade-in anim-delay-2">
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-2.5 py-1 rounded-full">
             {tag}
@@ -75,7 +77,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       </div>
 
       {/* Highlights */}
-      <div className="mb-10">
+      <div className="mb-10 animate-fade-in anim-delay-3">
         <h2 className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">
           Highlights
         </h2>
@@ -90,7 +92,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       </div>
 
       {/* Tech stack */}
-      <div className="mb-10">
+      <div className="mb-10 animate-fade-in anim-delay-4">
         <h2 className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">
           Tech Stack
         </h2>

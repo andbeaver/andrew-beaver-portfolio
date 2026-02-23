@@ -1,8 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import ProjectCard from "@/components/ProjectCard";
+import FadeInSection from "@/components/FadeInSection";
 import { projects } from "@/data/projects";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
-
+// Photo by <a href="https://unsplash.com/@nathfx?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">natasha</a> on <a href="https://unsplash.com/photos/body-of-water-across-city-buildings-093I0j4A73Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      
 export default function Home() {
   const featured = projects.filter((p) => p.featured);
 
@@ -27,7 +30,7 @@ export default function Home() {
         </div>
 
         {/* Supporting paragraph — 1–2 sentences */}
-          <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl animate-fade-in anim-delay-3">
+        <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl animate-fade-in anim-delay-3">
           I design and build scalable applications for web and mobile — spanning full-stack cloud systems, real-time data, and cross-platform development.
           My focus is clean architecture and software that delivers lasting, practical value.
         </p>
@@ -50,8 +53,38 @@ export default function Home() {
 
       </div>
 
-      {/* Featured Projects */}
+      {/* Scroll cue */}
+      <div className="flex justify-center -mt-8 mb-2 animate-bounce">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6 text-slate-300"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+          aria-hidden="true"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <div className="relative w-full h-48 sm:h-64 overflow-hidden rounded-2xl my-6">
+        <Image
+          src="/halifax-skyline.jpg"
+          alt="Halifax skyline"
+          fill
+          className="object-cover object-[center_82%] brightness-90 saturate-[0.9]"
+          priority
+          sizes="(max-width: 1024px) 100vw, 1024px"
+        />
+        {/* subtle edge fades only */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-50/40 dark:from-slate-950/40 via-transparent to-slate-50/40 dark:to-slate-950/40" />
+        <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-slate-50 dark:from-slate-950 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-slate-50 dark:from-slate-950 to-transparent" />
+        {/* caption */}
+        <p className="absolute bottom-3 right-4 text-xs text-white/50 select-none">Halifax, NS</p>
+      </div>
       {featured.length > 0 && (
+        <FadeInSection>
         <div className="py-10 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-5">
           <div className="flex items-center justify-between">
             <div>
@@ -71,9 +104,11 @@ export default function Home() {
             ))}
           </div>
         </div>
+        </FadeInSection>
       )}
 
       {/* Core Technologies */}
+      <FadeInSection delay="100ms">
         <div className="py-10 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-5">
           <div className="flex items-center justify-between">
             <div>
@@ -102,10 +137,12 @@ export default function Home() {
           ))}
         </div>
       </div>
+      </FadeInSection>
 
       {/* Final CTA */}
+      <FadeInSection delay="100ms">
       <div className="py-10 border-t border-slate-100 flex flex-col items-center gap-4 text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
           Interested in working together?
         </h2>
         <p className="text-slate-500 text-base max-w-md">
@@ -118,6 +155,7 @@ export default function Home() {
           Get in Touch
         </Link>
       </div>
+      </FadeInSection>
     </section>
   );
 }
