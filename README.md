@@ -55,17 +55,53 @@ CONTACT_EMAIL=your@email.com
 
 ## Project Structure
 
-```
+
 my-portfolio/
 ├── app/
+│   ├── globals.css
+│   ├── layout.tsx
 │   ├── page.tsx              # Home / hero
-│   ├── about/page.tsx        # About & skills
-│   ├── projects/page.tsx     # Project grid
-│   ├── projects/[id]/        # Project detail
-│   ├── contact/page.tsx      # Contact form
-│   └── api/contact/route.ts  # Resend email handler
-├── components/               # Reusable UI components
-└── data/projects.ts          # Project data
+│   ├── about/
+│   │   └── page.tsx          # About & skills
+│   ├── projects/
+│   │   ├── page.tsx          # Project grid
+│   │   └── [id]/
+│   │       └── page.tsx      # Project detail
+│   ├── contact/
+│   │   └── page.tsx          # Contact form
+│   └── api/
+│       └── contact/
+│           └── route.ts      # Resend email handler
+├── components/
+│   ├── contact/
+│   │   ├── ContactCard.tsx
+│   │   ├── ContactContent.tsx
+│   │   ├── ContactForm.tsx
+│   │   └── index.ts
+│   ├── layout/
+│   │   ├── Footer.tsx
+│   │   ├── index.ts
+│   │   ├── Nav.tsx
+│   │   ├── PageTransition.tsx
+│   │   └── ThemeProvider.tsx
+│   ├── projects/
+│   │   ├── index.ts
+│   │   ├── ProjectCard.tsx
+│   │   └── ProjectsGrid.tsx
+│   └── ui/
+│       ├── AvailabilityBadge.tsx
+│       ├── FadeInSection.tsx
+│       ├── index.ts
+│       ├── ScrollGradientBackground.tsx
+│       ├── ScrollToTop.tsx
+│       ├── SkillsSection.tsx
+│       ├── TechTooltip.tsx
+│       ├── ThemeToggle.tsx
+│       ├── TiltCard.tsx
+│       └── TypeWriter.tsx
+├── data/
+│   └── projects.ts           # Project data
+└── public/
 ```
 
 ## Scripts
