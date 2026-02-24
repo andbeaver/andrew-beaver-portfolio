@@ -87,8 +87,8 @@ export default function ProjectCard({
     >
       {/* Header */}
       <div className="flex flex-col gap-1.5">
-        <div className="flex items-start justify-between gap-3">
-          <h3 className="font-bold text-slate-900 dark:text-white text-xl leading-snug">
+        <div className="flex items-start justify-between flex-wrap gap-x-3 gap-y-1.5">
+          <h3 className="font-bold text-slate-900 dark:text-white text-xl leading-snug min-w-0">
             <Link
               href={`/projects/${id}`}
               className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"

@@ -59,6 +59,15 @@ html {
   animation: expandWidth 0.3s ease-out forwards;
 }
 
+/* Hide scrollbar for horizontal filter row */
+.scrollbar-none {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
 /* Nav link underline animation on hover */
 a.group:hover span.nav-underline,
 a.group:focus span.nav-underline {
