@@ -98,7 +98,7 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Featured Projects</h2>
-              <p className="text-sm text-slate-400 dark:text-slate-500 mt-0.5">A few highlights from my work.</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">A few highlights from my work.</p>
             </div>
             <Link
               href="/projects"
@@ -122,7 +122,7 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Core Technologies</h2>
-              <p className="text-sm text-slate-400 dark:text-slate-500 mt-0.5">Tools and languages I have experience with.</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Tools and languages I have experience with.</p>
           </div>
           <Link
             href="/about"

@@ -96,7 +96,7 @@ export default function ProjectCard({
               {title}
             </Link>
           </h3>
-          <span className="shrink-0 text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-2.5 py-1 rounded-full">
+          <span className="shrink-0 text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-2.5 py-1 rounded-full">
             {tag}
           </span>
         </div>

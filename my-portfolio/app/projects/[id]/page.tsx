@@ -61,7 +61,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       {/* Header */}
       <div className="flex flex-col gap-4 mb-10 animate-fade-in anim-delay-2">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-2.5 py-1 rounded-full">
+          <span className="text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-2.5 py-1 rounded-full">
             {tag}
           </span>
           <span
@@ -78,7 +78,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
       {/* Highlights */}
       <div className="mb-10 animate-fade-in anim-delay-3">
-        <h2 className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">
+        <h2 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4">
           Highlights
         </h2>
         <ul className="flex flex-col gap-3">
@@ -93,7 +93,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
       {/* Tech stack */}
       <div className="mb-10 animate-fade-in anim-delay-4">
-        <h2 className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">
+        <h2 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4">
           Tech Stack
         </h2>
         <div className="flex flex-wrap gap-2">

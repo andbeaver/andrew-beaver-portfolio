@@ -52,14 +52,14 @@ export default function Footer() {
             <span className="text-lg font-extrabold text-slate-900 dark:text-white tracking-tight">
               Andrew Beaver
             </span>
-            <p className="text-xs text-slate-400 dark:text-slate-500 leading-relaxed max-w-xs">
+            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed max-w-xs">
               Student software developer building thoughtful, user-focused products.
             </p>
           </div>
 
           {/* Middle: Navigation */}
           <div>
-            <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">
+            <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4">
               Navigation
             </p>
             <ul className="flex flex-col gap-2">
@@ -78,7 +78,7 @@ export default function Footer() {
 
           {/* Right: Social */}
           <div>
-            <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">
+            <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4">
               Connect
             </p>
             <ul className="flex flex-col gap-3">
@@ -102,7 +102,7 @@ export default function Footer() {
 
         {/* Bottom copyright row */}
         <div className="mt-10 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-slate-400 dark:text-slate-500 text-center sm:text-left">
+          <p className="text-xs text-slate-500 dark:text-slate-400 text-center sm:text-left">
             &copy; {year} Andrew Beaver. All rights reserved.
           </p>
           <p className="text-xs text-slate-300 dark:text-slate-600 text-center sm:text-right">

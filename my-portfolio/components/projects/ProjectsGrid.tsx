@@ -22,7 +22,7 @@ export default function ProjectsGrid({ projects }: Props) {
     <div className="flex gap-8 items-start">
       {/* Left sidebar – category filter */}
       <aside className="w-40 shrink-0 sticky top-24">
-        <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-3">
+        <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-3">
           Category
         </p>
         <nav className="flex flex-col gap-0.5">
@@ -45,7 +45,7 @@ export default function ProjectsGrid({ projects }: Props) {
                 <span>{cat}</span>
                 <span
                   className={`text-xs tabular-nums ${
-                    isActive ? "text-indigo-500" : "text-slate-400 dark:text-slate-500"
+                    isActive ? "text-indigo-500" : "text-slate-500 dark:text-slate-400"
                   }`}
                 >
                   {count}
