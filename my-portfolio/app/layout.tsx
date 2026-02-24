@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import ThemeProvider from "@/components/layout/ThemeProvider";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import PageTransition from "@/components/layout/PageTransition";
+import ScrollGradientBackground from "@/components/ui/ScrollGradientBackground";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 flex flex-col min-h-screen antialiased">
         <ThemeProvider>
+          <ScrollGradientBackground />
           <Nav />
           <main className="flex-1">
             <PageTransition>{children}</PageTransition>
