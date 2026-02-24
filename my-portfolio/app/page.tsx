@@ -30,8 +30,8 @@ export default function Home() {
             <TypeWriter
               phrases={[
                 "Full-Stack Developer",
-                "Web & Mobile Applications",
-                "Cloud & API Engineer",
+                "Web & Mobile App Engineer",
+                "API & Cloud Solutions",
                 "UI/UX Enthusiast",
               ]}
             />
