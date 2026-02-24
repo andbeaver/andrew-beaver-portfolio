@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
+
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 import ThemeProvider from "@/components/layout/ThemeProvider";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import PageTransition from "@/components/layout/PageTransition";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Andrew Beaver | Developer Portfolio",
@@ -28,6 +30,7 @@ export default function RootLayout({
           <Footer />
           <ScrollToTop />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
