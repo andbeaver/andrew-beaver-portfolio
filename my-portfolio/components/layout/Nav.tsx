@@ -67,7 +67,7 @@ export default function Nav() {
           <span className="text-xl font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
             Andrew Beaver
           </span>
-          <span className="text-xs text-slate-400 dark:text-slate-500 font-medium mt-0.5">
+          <span className="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">
             Developer Portfolio
           </span>
         </Link>

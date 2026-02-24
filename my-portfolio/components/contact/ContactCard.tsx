@@ -31,7 +31,7 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
           <li className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
             <svg
               aria-hidden="true"
-              className="w-4 h-4 text-slate-400 dark:text-slate-500 shrink-0"
+              className="w-4 h-4 text-slate-500 dark:text-slate-400 shrink-0"
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
@@ -54,7 +54,7 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
           <li className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
             <svg
               aria-hidden="true"
-              className="w-4 h-4 text-slate-400 dark:text-slate-500 shrink-0"
+              className="w-4 h-4 text-slate-500 dark:text-slate-400 shrink-0"
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
@@ -79,7 +79,7 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
 
         {/* Email + copy */}
         <div>
-          <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-2">
+          <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-2">
             Direct Email
           </p>
           <div className="flex items-center justify-between gap-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-lg px-4 py-3">
@@ -139,7 +139,7 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
 
       {/* Social links card */}
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 shadow-sm">
-        <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">
+        <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4">
           Also Find Me On
         </p>
         <div className="flex flex-col gap-3">
@@ -151,7 +151,7 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
           >
             <svg
               aria-hidden="true"
-              className="w-5 h-5 text-slate-400 dark:text-slate-500 group-hover:text-indigo-500 transition-colors shrink-0"
+              className="w-5 h-5 text-slate-500 dark:text-slate-400 group-hover:text-indigo-500 transition-colors shrink-0"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -169,7 +169,7 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
           >
             <svg
               aria-hidden="true"
-              className="w-5 h-5 text-slate-400 dark:text-slate-500 group-hover:text-indigo-500 transition-colors shrink-0"
+              className="w-5 h-5 text-slate-500 dark:text-slate-400 group-hover:text-indigo-500 transition-colors shrink-0"
               fill="currentColor"
               viewBox="0 0 24 24"
             >

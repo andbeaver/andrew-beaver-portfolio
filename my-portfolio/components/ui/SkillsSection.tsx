@@ -12,7 +12,7 @@ export default function SkillsSection({ groups }: { groups: SkillGroup[] }) {
     <div className="flex flex-col gap-5">
       {groups.map((group) => (
         <div key={group.label}>
-          <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-2.5">
+          <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-2.5">
             {group.label}
           </p>
           <div className="flex flex-wrap gap-2">

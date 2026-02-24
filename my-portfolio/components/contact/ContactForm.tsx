@@ -266,7 +266,7 @@ export default function ContactForm({
                   ? "border-red-400 focus-visible:ring-red-300 text-slate-400"
                   : formData.subject
                   ? "border-slate-200 dark:border-slate-600 focus-visible:ring-indigo-400 text-slate-900 dark:text-white"
-                  : "border-slate-200 dark:border-slate-600 focus-visible:ring-indigo-400 text-slate-400 dark:text-slate-500"
+                  : "border-slate-200 dark:border-slate-600 focus-visible:ring-indigo-400 text-slate-500 dark:text-slate-400"
               }`}
             >
               <option value="" disabled>
@@ -403,7 +403,7 @@ export default function ContactForm({
 
       {/* Response time */}
       {submitStatus !== "success" && (
-        <p className="mt-4 text-xs text-slate-400 dark:text-slate-500 text-center flex items-center justify-center gap-1.5">
+        <p className="mt-4 text-xs text-slate-500 dark:text-slate-400 text-center flex items-center justify-center gap-1.5">
           <svg
             aria-hidden="true"
             className="w-3.5 h-3.5 shrink-0"
