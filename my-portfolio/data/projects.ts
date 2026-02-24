@@ -19,7 +19,7 @@ export const projects: Project[] = [
     title: "TicketHive",
     tag: "Full-Stack · Academic",
     description:
-      "A concert ticket purchasing platform with a customer-facing storefront, an admin portal, and a dedicated REST API — all cloud-deployed on Azure.",
+      "A concert ticket purchasing platform with a customer-facing storefront, an admin portal, and a dedicated REST API - all cloud-deployed on Azure.",
     category: "Web",
     techStack: ["C#", "ASP.NET Core", "React", "Node.js", "Express", "SQL Server", "Entity Framework", "Azure", "Vite"],
     bullets: [
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     title: "MealWave",
     tag: "Mobile · Personal",
     description:
-      "A cross-platform mobile app that applies the Warsaw Method to calculate insulin recommendations for complex meals — built for people managing Type 1 Diabetes.",
+      "A cross-platform mobile app that applies the Warsaw Method to calculate insulin recommendations for complex meals - built for people managing Type 1 Diabetes.",
     category: "Mobile",
     techStack: ["Dart", "Flutter", "Material 3"],
     bullets: [
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     title: "Arrivio",
     tag: "Full-Stack · Hackathon",
     description:
-      "A commute-planning tool that tells you exactly when to leave based on real-time traffic — built as part of a one-week hackathon with a team of four.",
+      "A commute-planning tool that tells you exactly when to leave based on real-time traffic - built as part of a one-week hackathon with a team of four.",
     category: "Web",
     techStack: ["React", "Vite", "Node.js", "Express", "Google Maps API", "Google OAuth", "Azure"],
     bullets: [
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     title: "WeatherPal",
     tag: "Android · Academic",
     description:
-      "A location-aware Android weather app with real-time conditions, 5-day forecasts, and severe weather alerts — built around a fully reactive MVVM architecture.",
+      "A location-aware Android weather app with real-time conditions, 5-day forecasts, and severe weather alerts - built around a fully reactive MVVM architecture.",
     category: "Mobile",
     techStack: ["Kotlin", "Jetpack Compose", "Retrofit", "Coroutines", "MVVM", "Google Play Services", "Material Design"],
     bullets: [
@@ -131,7 +131,7 @@ export const projects: Project[] = [
     title: "Screensaver Simulation",
     tag: "Desktop · Academic",
     description:
-      "An interactive screensaver with animated shapes, real-time collision physics, and dynamic runtime spawning — running at ~60 FPS via double-buffered rendering.",
+      "An interactive screensaver with animated shapes, real-time collision physics, and dynamic runtime spawning - running at ~60 FPS via double-buffered rendering.",
     category: "Systems",
     techStack: ["C#", "Windows Forms", ".NET Framework"],
     bullets: [

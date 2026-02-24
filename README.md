@@ -56,6 +56,7 @@ CONTACT_EMAIL=your@email.com
 ## Project Structure
 
 
+```text
 my-portfolio/
 ├── app/
 │   ├── globals.css
@@ -102,6 +103,7 @@ my-portfolio/
 ├── data/
 │   └── projects.ts           # Project data
 └── public/
+```
 ```
 
 ## Scripts
