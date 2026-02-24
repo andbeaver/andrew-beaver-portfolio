@@ -54,7 +54,7 @@ export default function Home() {
           </Link>
           <Link
             href="/contact"
-            className="inline-block text-slate-700 text-sm font-semibold px-7 py-3.5 rounded-xl border border-slate-200 hover:border-indigo-300 hover:text-indigo-600 hover:bg-white active:bg-slate-50 transition-colors"
+            className="inline-block text-slate-700 text-sm dark:text-slate-400 font-semibold px-7 py-3.5 rounded-xl border border-slate-200 hover:border-indigo-300 hover:text-indigo-600 hover:bg-white active:bg-slate-50 transition-colors"
           >
             Contact Me
           </Link>

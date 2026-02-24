@@ -87,9 +87,9 @@ export default function Nav() {
                   >
                     {label}
                     <span
-                      className={`absolute bottom-0 left-0 h-0.5 rounded-full bg-indigo-600 transition-all duration-300 ${
-                        active ? "w-4/5" : "w-0 group-hover:w-full"
-                      } bg-indigo-600 dark:bg-indigo-400`}
+                      className={`nav-underline absolute bottom-0 left-0 h-0.5 rounded-full bg-indigo-600 dark:bg-indigo-400 ${
+                        active ? "w-full" : "w-0"
+                      }`}
                     />
                   </Link>
                 </li>
@@ -104,7 +104,7 @@ export default function Nav() {
                 className="group relative px-4 py-2 text-sm font-medium transition-colors text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
               >
                 Resume
-                <span className="absolute bottom-0 left-0 h-0.5 w-0 rounded-full bg-indigo-600 transition-all duration-300 group-hover:w-full" />
+                <span className="nav-underline absolute bottom-0 left-0 h-0.5 w-0 rounded-full bg-indigo-600 dark:bg-indigo-400" />
               </a>
             </li>
           </ul>
