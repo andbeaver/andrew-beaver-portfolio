@@ -40,7 +40,7 @@ export default function Home() {
 
         {/* Supporting paragraph — 1–2 sentences */}
         <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl animate-fade-in anim-delay-3">
-          I design and build scalable applications for web and mobile — spanning full-stack cloud systems, real-time data, and cross-platform development.
+          I design and build scalable applications for web and mobile - spanning full-stack cloud systems, real-time data, and cross-platform development.
           My focus is clean architecture and software that delivers lasting, practical value.
         </p>
 
@@ -150,7 +150,7 @@ export default function Home() {
           Interested in working together?
         </h2>
         <p className="text-slate-500 text-base max-w-md">
-          I&apos;m open to internships, co-ops, and freelance opportunities — let&apos;s connect.
+          I&apos;m open to internships, co-ops, and freelance opportunities. Let&apos;s connect!
         </p>
         <Link
           href="/contact"
