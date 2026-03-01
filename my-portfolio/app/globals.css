@@ -155,6 +155,46 @@ body {
   animation: blink 0.75s step-end infinite;
 }
 
+/* Waving hand animation */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(8deg); }
+  50% { transform: rotate(-8deg); }
+  80% { transform: rotate(8deg); }
+ 100% { transform: rotate(0deg); }
+}
+
+.wave-hand-wrapper {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  vertical-align: middle;
+}
+.wave-hand-emoji {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 70% 70%;
+  will-change: transform;
+  cursor: pointer;
+  font-size: 2.25rem;
+  line-height: 1;
+}
+.wave-hand-wrapper:hover .wave-hand-emoji,
+.wave-hand-wrapper:focus-within .wave-hand-emoji {
+  animation: wave 700ms ease-in-out 1 both;
+}
+.wave-hand-wrapper:focus-within {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.12);
+}
+
 /* Smooth dark/light mode color transitions */
 body,
 body * {

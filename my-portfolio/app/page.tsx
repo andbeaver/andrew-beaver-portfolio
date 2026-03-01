@@ -24,15 +24,27 @@ export default function Home() {
         {/* Headline block */}
         <div className="flex flex-col gap-3 animate-fade-in anim-delay-2">
           <h1 className="text-6xl sm:text-7xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.05]">
-            Andrew Beaver
+            <span className="inline-flex items-center gap-3">
+              <span>Andrew Beaver</span>
+              <span
+                role="group"
+                aria-label="waving hand"
+                tabIndex={0}
+                className="wave-hand-wrapper select-none"
+              >
+                <span className="wave-hand-emoji" aria-hidden>
+                  👋
+                </span>
+              </span>
+            </span>
           </h1>
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">📍Halifax, Nova Scotia, Canada</p>
           <p className="text-xl sm:text-2xl text-indigo-600 font-semibold h-8 sm:h-9">
             <TypeWriter
               phrases={[
                 "Full-Stack Developer",
-                "Web & Mobile App Engineer",
+                "Web & Mobile Applications",
                 "API & Cloud Solutions",
-                "UI/UX Enthusiast",
               ]}
             />
           </p>
@@ -48,13 +60,13 @@ export default function Home() {
         <div className="flex flex-wrap items-center gap-4 pt-1 animate-fade-in anim-delay-4">
           <Link
             href="/projects"
-            className="inline-block bg-indigo-600 text-white text-sm font-semibold px-7 py-3.5 rounded-xl hover:bg-indigo-500 active:bg-indigo-700 transition-colors shadow-md shadow-indigo-200"
+            className="inline-block bg-indigo-600 text-white text-sm font-semibold px-7 py-3.5 rounded-xl hover:bg-indigo-500 active:bg-indigo-700 transition-colors transition-transform duration-200 ease-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg shadow-md shadow-indigo-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
           >
             View Projects
           </Link>
           <Link
             href="/contact"
-            className="inline-block text-slate-700 text-sm dark:text-slate-400 font-semibold px-7 py-3.5 rounded-xl border border-slate-200 hover:border-indigo-300 hover:text-indigo-600 hover:bg-white active:bg-slate-50 transition-colors"
+            className="inline-block text-slate-700 text-sm dark:text-slate-400 font-semibold px-7 py-3.5 rounded-xl border border-slate-200 hover:border-indigo-300 hover:text-indigo-600 hover:bg-white active:bg-slate-50 transition-colors transition-transform duration-200 ease-out transform hover:-translate-y-1 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
           >
             Contact Me
           </Link>
@@ -134,7 +146,7 @@ export default function Home() {
         <div className="flex flex-wrap gap-2.5">
           {[
             "TypeScript", "React", "Next.js", "Node.js",
-            "Python", "React Native", "PostgreSQL", "Firebase",
+            "Python", "React Native", "PostgreSQL",
             "Tailwind CSS", "REST APIs", "Git",
           ].map((tech) => (
             <TechTooltip key={tech} label={tech} variant="pill" />
@@ -154,7 +166,7 @@ export default function Home() {
         </p>
         <Link
           href="/contact"
-          className="mt-2 inline-block bg-indigo-600 text-white text-sm font-semibold px-7 py-3.5 rounded-xl hover:bg-indigo-500 active:bg-indigo-700 transition-colors shadow-md shadow-indigo-200"
+          className="mt-2 inline-block bg-indigo-600 text-white text-sm font-semibold px-7 py-3.5 rounded-xl hover:bg-indigo-500 active:bg-indigo-700 transition-colors transition-transform duration-200 ease-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg shadow-md shadow-indigo-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
         >
           Get in Touch
         </Link>
