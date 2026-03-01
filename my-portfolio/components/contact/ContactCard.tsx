@@ -1,3 +1,4 @@
+import { useState } from "react";
 import AvailabilityBadge from "@/components/ui/AvailabilityBadge";
 
 interface ContactCardProps {
@@ -7,17 +8,29 @@ interface ContactCardProps {
 }
 
 export default function ContactCard({ email, copied, onCopy }: ContactCardProps) {
+  const [hover, setHover] = useState(false);
+
   return (
     <div className="flex flex-col gap-5">
       {/* Identity & info card */}
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-8 shadow-sm">
         {/* Avatar + name */}
         <div className="flex items-center gap-4 mb-6">
-          <img
-            src="/Headshot.jpg"
-            alt="Andrew Beaver headshot"
-            className="w-14 h-14 rounded-full object-cover shrink-0"
-          />
+          <div className="relative w-14 h-14 shrink-0">
+            <img
+              src={hover ? "/Headshot-hover.jpg" : "/Headshot.jpg"}
+              alt="Andrew Beaver headshot"
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              className="w-14 h-14 rounded-full object-cover transition-all duration-200"
+            />
+            <span
+              aria-hidden="true"
+              className={`absolute inset-0 rounded-full pointer-events-none border-2 border-emerald-400 transform transition-all duration-300 ${
+                hover ? "scale-100 opacity-100" : "scale-75 opacity-0"
+              }`}
+            />
+          </div>
           <div>
             <h2 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
               Andrew Beaver
