@@ -7,7 +7,7 @@ import AvailabilityBadge from "@/components/ui/AvailabilityBadge";
 import TypeWriter from "@/components/ui/TypeWriter";
 import TechTooltip from "@/components/ui/TechTooltip";
 // Photo by <a href="https://unsplash.com/@nathfx?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">natasha</a> on <a href="https://unsplash.com/photos/body-of-water-across-city-buildings-093I0j4A73Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-      
+      // <a href="https://www.flaticon.com/free-icons/wildlife" title="wildlife icons">Wildlife icons created by Freepik - Flaticon</a>
 export default function Home() {
   const featured = projects.filter((p) => p.featured);
 
