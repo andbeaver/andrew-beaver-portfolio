@@ -69,12 +69,14 @@ export default function AboutPage() {
             <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6 flex flex-col gap-2 shadow-sm hover:shadow-md hover:border-indigo-200 dark:hover:border-indigo-700 hover:-translate-y-1 transition-all duration-200">
               <div className="flex items-start justify-between gap-4 flex-wrap">
                 <div>
-                  <p className="font-semibold text-slate-900 dark:text-white">IT Programming</p>
+                  <p className="font-semibold text-slate-900 dark:text-white">
+                    <a href="https://www.nscc.ca/programs-and-courses/programs/plandescr.aspx?prg=ITPR&pln=ITPROGRAM" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline dark:text-indigo-400">IT Programming</a>
+                  </p>
                   <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
                   Nova Scotia Community College - Halifax, NS
                 </p>
               </div>
-              <span className="shrink-0 inline-flex items-center bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">
+              <span className="shrink-0 inline-flex items-center bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-sm font-semibold px-2.5 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">
                 In Progress &middot; Expected 2026
               </span>
             </div>
@@ -85,14 +87,14 @@ export default function AboutPage() {
               <div className="flex items-start justify-between gap-4 flex-wrap">
                 <div>
                   <p className="font-semibold text-slate-900 dark:text-white">
-                    Business Administration Diploma
+                    <a href="https://www.nscc.ca/programs-and-courses/programs/plandescr.aspx?prg=BSAD&pln=BSAD-YR1" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline dark:text-indigo-400">Business Administration Diploma</a>
                     <span className="font-normal text-slate-500 dark:text-slate-400"> - Marketing</span>
                   </p>
                   <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
                   Nova Scotia Community College - Dartmouth, NS
                 </p>
               </div>
-              <span className="shrink-0 inline-flex items-center bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-slate-200 dark:border-slate-700">
+              <span className="shrink-0 inline-flex items-center bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-semibold px-2.5 py-1 rounded-full border border-slate-200 dark:border-slate-700">
                 2018
               </span>
             </div>
@@ -102,12 +104,14 @@ export default function AboutPage() {
             <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6 flex flex-col gap-2 shadow-sm hover:shadow-md hover:border-indigo-200 dark:hover:border-indigo-700 hover:-translate-y-1 transition-all duration-200">
               <div className="flex items-start justify-between gap-4 flex-wrap">
                 <div>
-                  <p className="font-semibold text-slate-900 dark:text-white">DELF B1 Certification</p>
+                  <p className="font-semibold text-slate-900 dark:text-white">
+                    <a href="http://www.delfdalf.fr/level-b1-cefr-common-european-framework-of-reference-for-languages.html" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline dark:text-indigo-400">DELF B1 Certification</a>
+                  </p>
                   <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
                   French Language Proficiency - Issued by the French Ministry of Education
                 </p>
               </div>
-              <span className="shrink-0 inline-flex items-center bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-slate-200 dark:border-slate-700">
+              <span className="shrink-0 inline-flex items-center bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-semibold px-2.5 py-1 rounded-full border border-slate-200 dark:border-slate-700">
                 2016
               </span>
             </div>

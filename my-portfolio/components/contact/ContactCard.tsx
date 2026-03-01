@@ -13,9 +13,11 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-8 shadow-sm">
         {/* Avatar + name */}
         <div className="flex items-center gap-4 mb-6">
-          <div className="w-14 h-14 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center text-xl font-bold text-indigo-600 dark:text-indigo-400 shrink-0 select-none">
-            AB
-          </div>
+          <img
+            src="/Headshot.jpg"
+            alt="Andrew Beaver headshot"
+            className="w-14 h-14 rounded-full object-cover shrink-0"
+          />
           <div>
             <h2 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
               Andrew Beaver

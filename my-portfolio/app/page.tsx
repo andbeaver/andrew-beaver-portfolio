@@ -97,8 +97,9 @@ export default function Home() {
           priority
           sizes="(max-width: 1024px) 100vw, 1024px"
         />
-        {/* subtle edge fades only */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-50/40 dark:from-slate-950/40 via-transparent to-slate-50/40 dark:to-slate-950/40" />
+        {/* subtle edge fades: top, bottom, and now sides */}
+        <div className="absolute left-0 top-0 bottom-0 w-8 pointer-events-none bg-gradient-to-r from-slate-50/90 dark:from-slate-950/90 to-transparent" />
+        <div className="absolute right-0 top-0 bottom-0 w-8 pointer-events-none bg-gradient-to-l from-slate-50/90 dark:from-slate-950/90 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-slate-50 dark:from-slate-950 to-transparent" />
         <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-slate-50 dark:from-slate-950 to-transparent" />
         {/* caption */}

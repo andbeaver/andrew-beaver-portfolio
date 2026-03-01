@@ -273,7 +273,7 @@ export default function ContactForm({
                 Select a subject&hellip;
               </option>
               {SUBJECTS.map((s) => (
-                <option key={s} value={s} className="text-slate-900">
+                <option key={s} value={s} className="text-slate-900 dark:text-white">
                   {s}
                 </option>
               ))}
