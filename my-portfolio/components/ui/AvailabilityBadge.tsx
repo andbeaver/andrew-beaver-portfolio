@@ -1,7 +1,7 @@
 const opportunities = [
   { label: "Full-Time Opportunities", icon: "💼" },
   { label: "Part-Time Opportunities", icon: "🕐" },
-  { label: "5–16 Week Work Terms", icon: "📅" },
+  { label: "5–16 Week Work Terms/Co-op", icon: "📅" },
   { label: "Freelance Projects", icon: "🚀" },
 ];
 
