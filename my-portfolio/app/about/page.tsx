@@ -70,7 +70,7 @@ export default function AboutPage() {
               <div className="flex items-start justify-between gap-4 flex-wrap">
                 <div>
                   <p className="font-semibold text-slate-900 dark:text-white">
-                    <a href="https://www.nscc.ca/programs-and-courses/programs/plandescr.aspx?prg=ITPR&pln=ITPROGRAM" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline dark:text-indigo-400">IT Programming</a>
+                    <a href="https://www.nscc.ca/programs-and-courses/programs/plandescr.aspx?prg=ITPR&pln=ITPROGRAM" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline dark:text-indigo-400">IT Programming Diploma</a>
                   </p>
                   <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
                   Nova Scotia Community College - Halifax, NS
@@ -78,6 +78,23 @@ export default function AboutPage() {
               </div>
               <span className="shrink-0 inline-flex items-center bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-sm font-semibold px-2.5 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">
                 In Progress &middot; Expected 2026
+              </span>
+            </div>
+          </div>
+
+          {/* Dalhousie University */}
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6 flex flex-col gap-2 shadow-sm hover:shadow-md hover:border-indigo-200 dark:hover:border-indigo-700 hover:-translate-y-1 transition-all duration-200">
+              <div className="flex items-start justify-between gap-4 flex-wrap">
+                <div>
+                  <p className="font-semibold text-slate-900 dark:text-white">
+                    <a href="https://www.dal.ca/study/programs/undergraduate/applied-computer-science-bacs.html" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline dark:text-indigo-400">Bachelor of Applied Computer Science Degree</a>
+                  </p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
+                  Dalhousie University - Halifax, NS
+                </p>
+              </div>
+              <span className="shrink-0 inline-flex items-center bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-sm font-semibold px-2.5 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">
+                Admitted &middot; Starts Sep 2026 &middot; Expected 2028
               </span>
             </div>
           </div>

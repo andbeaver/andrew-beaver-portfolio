@@ -18,7 +18,7 @@ export default function ContactCard({ email, copied, onCopy }: ContactCardProps)
         <div className="flex items-center gap-4 mb-6">
           <div className="relative w-14 h-14 shrink-0">
             <img
-              src={hover ? "/Headshot-hover.jpg" : "/Headshot.jpg"}
+              src={hover ? "/sunglasses.png" : "/Headshot.jpg"}
               alt="Andrew Beaver headshot"
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
