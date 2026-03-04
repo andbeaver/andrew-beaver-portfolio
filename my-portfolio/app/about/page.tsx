@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 const skillGroups = [
   {
     label: "Languages",
-    skills: ["C#", "Kotlin", "Java", "Dart", "C/C++", "Python", "TypeScript", "JavaScript", "SQL", "HTML/CSS"],
+    skills: ["C#", "Kotlin", "Java", "Dart", "C", "C++", "Python", "TypeScript", "JavaScript", "SQL", "HTML/CSS"],
   },
   {
     label: "Web & Backend",
-    skills: ["ASP.NET Core MVC", "Node.js", "Express", "Entity Framework Core", ".NET Framework", "RESTful API"],
+    skills: ["ASP.NET Core", "Node.js", "Express", "Entity Framework", ".NET Framework", "RESTful API"],
   },
   {
     label: "Frontend & Mobile",
@@ -25,11 +25,11 @@ const skillGroups = [
   },
   {
     label: "Architecture & Patterns",
-    skills: ["MVVM", "MVC", "OOP", "Async/Await & Coroutines", "Relational Database Design", "GTFS Realtime", "Windows Forms"],
+    skills: ["MVVM", "MVC", "OOP", "Async/Await", "Relational Database Design", "GTFS Realtime", "Windows Forms"],
   },
   {
     label: "Tools & Systems",
-    skills: ["Git / GitHub", "Linux (Bash/CLI)", "Mapbox SDK", "Google Maps API", "Google OAuth", "Google Play Services", "Agile"],
+    skills: ["Git / GitHub", "Linux (Bash/CLI)", "Mapbox", "Google Maps API", "Google OAuth", "Google Play Services", "Agile Methodology"],
   },
 ];
 
@@ -42,11 +42,11 @@ export default function AboutPage() {
           About
         </h1>
         <p className="text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl">
-          I’m an IT Programming student focused on building practical, production-style software systems. My work spans full-stack web applications, Android development, and cross-platform mobile apps, with experience integrating cloud services, REST APIs, real-time data feeds, and structured database design.
+          I’m an IT Programming student at Nova Scotia Community College, graduating this spring and continuing into Applied Computer Science at Dalhousie University. I focus on building practical, production-style software systems across web and mobile platforms.
           <br /><br />
-          I’m particularly interested in application architecture, data flow, and building systems that are maintainable and scalable. Whether working independently or in a team setting, I prioritize clear structure, modular components, and thoughtful implementation over quick shortcuts.
+          My experience includes full-stack web applications, Android development, and cross-platform mobile apps, along with integrating cloud services, REST APIs, real-time data, and structured database design. I’m particularly interested in application architecture and data flow, building systems that are maintainable, scalable, and thoughtfully structured.
           <br /><br />
-          Through academic projects, hackathons, and personal development, I’ve built cloud-deployed platforms, real-time transit tracking apps, and domain-specific mobile tools involving scheduling logic and data persistence.
+          Through academic and personal projects, I’ve developed cloud-deployed platforms, real-time transit and weather tracking applications, and specialized mobile tools involving scheduling logic and persistent data storage.
         </p>
       </div>
 
