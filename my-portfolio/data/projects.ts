@@ -21,7 +21,7 @@ export const projects: Project[] = [
     description:
       "A concert ticket purchasing platform with a customer-facing storefront, an admin portal, and a dedicated REST API - all cloud-deployed on Azure.",
     category: "Web",
-    techStack: ["C#", "ASP.NET Core", "React", "Node.js", "Express", "SQL Server", "Entity Framework", "Azure", "Vite"],
+    techStack: ["C#", "ASP.NET Core", "MVC", "React", "Node.js", "Express", "RESTful API", "SQL Server", "Entity Framework", "Azure Blob Storage", "Azure App Service", "Vite", "HTML/CSS", "Relational Database Design", "Git / GitHub", "Agile Methodology"],
     bullets: [
       "Admin portal with authentication, CRUD, and Azure Blob Storage image management.",
       "React storefront with dynamic routing and a validated multi-step purchase flow.",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     description:
       "A cross-platform mobile app that applies the Warsaw Method to calculate insulin recommendations for complex meals - built for people managing Type 1 Diabetes.",
     category: "Mobile",
-    techStack: ["Dart", "Flutter", "Material 3"],
+    techStack: ["Dart", "Flutter", "Material 3", "Git / GitHub", "Agile Methodology"],
     bullets: [
       "Time-based insulin-to-carb ratio scheduler with auto-sorted, persistent entries.",
       "Multi-screen navigation across calculator, history, and ratio settings.",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     description:
       "An Android app that shows real-time Halifax Transit bus and ferry locations on a live map, with user-controlled route filtering.",
     category: "Mobile",
-    techStack: ["Kotlin", "Jetpack Compose", "Mapbox", "RoomDB", "GTFS Realtime"],
+    techStack: ["Kotlin", "Jetpack Compose", "Mapbox", "MVVM", "RoomDB", "GTFS Realtime", "Git / GitHub", "Agile Methodology"],
     bullets: [
       "Live bus markers and route shapes via Mapbox and GTFS Realtime feeds.",
       "MVVM architecture with RoomDB for persisting route selections across sessions.",
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     description:
       "A commute-planning tool that tells you exactly when to leave based on real-time traffic - built as part of a one-week hackathon with a team of four.",
     category: "Web",
-    techStack: ["React", "Vite", "Node.js", "Express", "Google Maps API", "Google OAuth", "Azure"],
+    techStack: ["React", "Vite", "Node.js", "Express", "Google Maps API", "Google OAuth", "Azure", "HTML/CSS" , "Git / GitHub"],
     bullets: [
       "Real-time routing with Google Maps API, OAuth login, and location autocomplete.",
       "Led frontend architecture, state management, and Maps API integration.",
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     description:
       "A location-aware Android weather app with real-time conditions, 5-day forecasts, and severe weather alerts - built around a fully reactive MVVM architecture.",
     category: "Mobile",
-    techStack: ["Kotlin", "Jetpack Compose", "Retrofit", "Coroutines", "MVVM", "Google Play Services", "Material Design"],
+    techStack: ["Kotlin", "Jetpack Compose", "Retrofit", "Coroutines", "MVVM", "Google Play Services", "Material Design", "Git / GitHub", "Agile Methodology"],
     bullets: [
       "MVVM with Kotlin StateFlow driving live UI updates across a multi-screen Compose interface.",
       "Startup location workflow using Google Play Services and Accompanist for runtime permissions.",
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     description:
       "An interactive screensaver with animated shapes, real-time collision physics, and dynamic runtime spawning - running at ~60 FPS via double-buffered rendering.",
     category: "Systems",
-    techStack: ["C#", "Windows Forms", ".NET Framework"],
+    techStack: ["C#", "Windows Forms", "OOP", ".NET Framework"],
     bullets: [
       "Polymorphic shape hierarchy with 5 derived types using inheritance for rendering and movement.",
       "AABB collision detection handling both shape-to-shape and wall collisions.",

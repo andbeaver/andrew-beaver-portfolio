@@ -83,7 +83,6 @@ export default function TechTooltip({ label, className = "", variant }: TechTool
   const [coords, setCoords] = useState<{ top: number; left: number; above: boolean }>({ top: 0, left: 0, above: true });
   const [mounted, setMounted] = useState(false);
   const wrapperRef = useRef<HTMLSpanElement>(null);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   const tip = tooltips[label];
 
@@ -105,18 +104,28 @@ export default function TechTooltip({ label, className = "", variant }: TechTool
   }, []);
 
   const handleEnter = useCallback(() => {
-    clearTimeout(timeoutRef.current);
     updateCoords();
     setShow(true);
   }, [updateCoords]);
 
   const handleLeave = useCallback(() => {
-    timeoutRef.current = setTimeout(() => setShow(false), 100);
+    // Hide immediately to avoid multiple tooltips lingering while scanning quickly
+    setShow(false);
   }, []);
 
+  // Update tooltip coords on scroll/resize to keep positioning accurate
   useEffect(() => {
-    return () => clearTimeout(timeoutRef.current);
-  }, []);
+    if (!mounted) return;
+    const onChange = () => {
+      if (show) updateCoords();
+    };
+    window.addEventListener("scroll", onChange, true);
+    window.addEventListener("resize", onChange);
+    return () => {
+      window.removeEventListener("scroll", onChange, true);
+      window.removeEventListener("resize", onChange);
+    };
+  }, [mounted, show, updateCoords]);
 
   const tooltip =
     tip && show && mounted
