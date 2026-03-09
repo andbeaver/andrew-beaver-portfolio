@@ -182,7 +182,7 @@ body {
   left: 0;
   transform-origin: 70% 70%;
   will-change: transform;
-  cursor: pointer;
+  cursor: default;
   font-size: 2.25rem;
   line-height: 1;
 }
