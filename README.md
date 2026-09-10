@@ -1,6 +1,6 @@
 # andrew-beaver-Portfolio
 
-Personal portfolio website built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS v4**. Features a project showcase, about page, and a functional contact form powered by Resend.
+Personal portfolio website built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**. Features a project showcase, about page, and a functional contact form powered by Resend.
 
 ## Pages
 
