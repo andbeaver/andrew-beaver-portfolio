@@ -28,30 +28,11 @@ Personal portfolio website built with **Next.js**, **React**, **TypeScript**, an
 
 ## Tech Stack
 
-- **Framework:** Next.js 16 (App Router)
+- **Framework:** Next.js (App Router)
 - **Language:** TypeScript
-- **Styling:** Tailwind CSS v4
+- **Styling:** Tailwind CSS
 - **Email:** Resend
-- **Deployment:** Vercel (recommended)
-
-## Getting Started
-
-```bash
-cd my-portfolio
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-### Environment Variables
-
-Create `my-portfolio/.env.local`:
-
-```env
-RESEND_API_KEY=your_resend_api_key
-CONTACT_EMAIL=your@email.com
-```
+- **Deployment:** Vercel
 
 ## Project Structure
 
